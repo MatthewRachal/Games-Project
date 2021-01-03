@@ -1,4 +1,4 @@
-ere is Attribution to the libaries with node package manager that I have used in the creation of this website. I have placed 
+Here is Attribution to the libaries with node package manager that I have used in the creation of this website. I have placed 
 the text noted in there licenses from there github pages below. 
 
 react-bootstrap
