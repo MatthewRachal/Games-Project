@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import GamesNavBar from './Components/GamesNavBar';
+import Dashboard from './Components/Dashboard';
+import TickTackToe from './Components/TickTackToe';
+import Hangman from './Components/Hangman';
+import Battleship from './Components/Battleship';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{}}>
+      <Router>
+        <GamesNavBar />
+        <Switch>
+          <Route path='/Home' component={Dashboard} />
+          <Route path="/TickTackToe" component={TickTackToe} />
+          <Route path="/Hangman" component={Hangman} />
+          <Route path="/Battleship" component={Battleship} />
+          <Route path="/" component={Dashboard} />
+
+
+        </Switch>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"/>
+      </Router>
     </div>
   );
 }

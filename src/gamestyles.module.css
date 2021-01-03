@@ -1,0 +1,280 @@
+/* Navbar for app */
+.navUL {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-bottom: solid;
+    border-color: rgb(43, 42, 42);
+  }
+.navLI {
+    float: left;
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.navLI:hover {
+    background-color: #111;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 600px)
+  {
+    .navUL {
+      width: 100%;
+    }
+    .navLI {
+      float: none;
+      text-align: center;
+      margin: 0px;
+    }
+
+  }
+
+/* Tick-Tack-Toe CSS */
+.TTTBoxNone {
+  width: 100%;
+  height: 140px;
+  padding: 0px;
+  margin: 0px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.TTTBoxNone:focus {
+  outline: none;
+}
+.TTTBoxChecked {
+    width: 50%;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: red;
+    color: green;
+    content: "\00d7";
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+    background-color: white;
+
+}
+.TTTBoxChecked:focus {
+  outline: none;
+}
+.TTTBoxCircle {
+    width: 40%;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 100%;
+    border-color: blue;
+    border-width: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: white;
+}
+.TTTBoxCircle:focus {
+  outline: none;
+}
+@media screen and (max-width: 1200px) {
+  .TTTBoxChecked {
+    width: 70%;
+  }
+  .TTTBoxCircle {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .TTTBoxChecked {
+    width: 90%;
+  }
+  .TTTBoxCircle {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .TTTBoxChecked {
+    width: 70%;
+  }
+  .TTTBoxCircle {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .TTTBoxCircle {
+    width: 98%;
+  }
+  .TTTBoxChecked {
+    width: 90%;
+  }
+}
+
+.gameButton {
+  background-color: #056124;
+  color: white;
+  border-color: black;
+  padding: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.gameButton:focus {
+  outline: none;
+}
+.gameButton:hover {
+  background-color: #ddbc02;
+  color: black;
+  box-shadow: 2px 2px 2px 2px;
+  font-weight: bold;
+  transition: 0.2s
+}
+
+.victory {
+  color: green;
+  font-weight: bold;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+
+}
+@keyframes fadeIn {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*CSS for Hangman */
+.keyBoardButton {
+  border-style: solid;
+  border-color: black;
+  font-weight: bold;
+  cursor: pointer;
+  height: 80px;
+  font-size: 1.75em;
+  width: 10%;
+}
+
+.keyBoardButton:focus {
+  outline: none;
+}
+
+.keyBoardButton:hover {
+  background-color: #0288d1;
+}
+.keyBoardButton:disabled {
+  background-color: #388e3c; 
+  cursor: default;
+}
+
+.letter {
+  border-bottom-style: solid;
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+}
+
+.letterEntry {
+  color: black;
+  border-bottom: solid;
+  text-align: center;
+  height: 60px;
+}
+
+@media screen and (max-width: 500px) {
+  .keyBoardButton {
+    font-size: 1em;
+  }
+  .letterEntry {
+    font-size: 1em;
+    height: 30px;
+  } 
+  
+}
+
+
+/* BattleShip CSS */
+
+.boardSquare {
+  background-color: blue;  
+  border: solid;
+  border-color: darkblue;
+  width: 8.2%;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+.boardSquare:hover {
+  background-color: orange;
+  cursor: crosshair;
+}
+.boardSquare:focus {
+  outline: none;
+}
+
+.boardSquareMiss {
+  background-color: yellow;  
+  border: solid;
+  border-color: darkblue;
+  width: 8.2%;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+.boardSquareMiss:focus {
+  outline: none;
+}
+
+.boardSquareHit {
+  background-color: darkred;  
+  border: solid;
+  border-color: darkblue;
+  width: 8.2%;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+.boardSquareHit:focus {
+  outline: none;
+}
+.boardSquareShip {
+  background-color: grey;  
+  border: solid;
+  border-color: darkblue;
+  width: 8.2%;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.standardButton {
+  background-color: green;
+  width: 70%;
+  height: 50px;
+  color: white;
+  border-color: black;
+}
+.standardButton:hover {
+  background-color: darkgreen;
+  cursor: pointer;
+}
+.standardButton:focus {
+  outline: none;
+}
+.standardButton:disabled {
+  opacity: 0.7;
+}
+
